@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-01 16:16:20
- * @LastEditTime: 2020-11-01 16:52:11
+ * @LastEditTime: 2020-11-01 17:06:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /react-ts-threejs/src/threeJS/learn/demo/pointer.tsx
@@ -41,6 +41,11 @@ VertexColors:   定义线条材质是否使用定点颜色，这是一个boolean
 /*
 颜色差值
 WebGL线绘制方式
+*/
+
+/*
+世界坐标
+本地坐标
 */
 
 import React, { useEffect, useRef } from "react";
@@ -108,6 +113,7 @@ const LineText = () => {
 
                 const line = new THREE.Line(geometry, material);
                 scene.add(line);
+
             }
 
             const threeStart = () => {

@@ -7,7 +7,7 @@ import {DancingCube, Line, LineText} from './threeJS/learn'
 function App() {
   return (
     <>
-      <LineText></LineText>
+      <DancingCube></DancingCube>
     </>
   );
 }

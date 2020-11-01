@@ -1,7 +1,7 @@
 /*
  * @Author: lemon-Xu
  * @Date: 2020-11-01 14:05:59
- * @LastEditTime: 2020-11-01 17:08:32
+ * @LastEditTime: 2020-11-01 17:12:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /react-ts-threejs/src/threeJS/learn/demo/demo1.tsx
@@ -64,11 +64,18 @@ const DancingCube = () => {
 
         const cube = new THREE.Mesh(geometry, material);
 
-        scene.add(cube);
+        // scene.add(cube);
 
         //  坐标系
         const axisHelper = new THREE.AxesHelper(4);
-        scene.add(axisHelper);
+        // scene.add(axisHelper);
+
+
+        // 成组
+        const objectTotal = new THREE.Object3D();
+        objectTotal.add(cube);
+        objectTotal.add(axisHelper)
+        scene.add(objectTotal);
 
 
         camera.position.z = 15;
@@ -77,7 +84,7 @@ const DancingCube = () => {
             requestAnimationFrame(render);
             // geometry.rotateX(0.01);
             // geometry.rotateZ(0.02);
-            geometry.rotateY(0.01);
+            objectTotal.rotateY(0.01);
             renderer.render(scene, camera);
         }
         render();

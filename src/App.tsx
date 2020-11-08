@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useImperativeHandle } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import {DancingCube, Line, LineText} from './threeJS/learn'
+import {DancingCube, Line, LineText, ChangeCamera, NoLight, UseAmbientLightLight, UseDirectionalLightLight, UsePointLightLight, UseBaseImageMaterial} from './threeJS/learn'
 
 function App() {
   return (
     <>
-      <DancingCube></DancingCube>
+      <UseBaseImageMaterial></UseBaseImageMaterial>
     </>
   );
 }

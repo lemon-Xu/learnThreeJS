@@ -1,16 +1,33 @@
 /*
  * @Author: lemon-Xu
  * @Date: 2020-11-01 14:05:59
- * @LastEditTime: 2021-01-17 18:33:42
+ * @LastEditTime: 2021-01-17 18:46:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /react-ts-threejs/src/threeJS/learn/demo/demo1.tsx
- *
- * 编写第一个three.js 程序
- * 实现一个居中的不断在跳舞的绿色的立方体
  */
 import * as THREE from "three";
 import React, { useEffect, useRef } from "react";
+
+/**
+ * 三维模型加载与显示基础
+ * 什么是三维模型，存放三维数据的文件，叫模型文件。
+ *
+ * 如果我们设计一个模型文件，应该怎么设计
+ * 只要点、线、面即可
+ * 由不同位置的2个点，组成线
+ * 三条线组成一个面
+ * 若干个面组成一个复杂的模型
+ *
+ * 每个面赋予不同的颜色和纹理
+ * 每个面计算出不同的光照效果
+ *
+ * 模型查看器
+ * ParaView、Blender
+ *
+ * 模型下载
+ * www.cc.gatech.edu/projects/large_models/
+ */
 
 /**
  * @description:
@@ -112,4 +129,4 @@ const TriangleGeometry = () => {
   </>;
 }
 
-export { Geometry, TriangleGeometry };
+export {  };
